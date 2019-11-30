@@ -12,6 +12,7 @@ npm install stc-postcss --save-dev
 
 in stc.config.js file, add:
 
+```js
 const postcss = require('stc-postcss');
 
 stc.transpile({
@@ -26,6 +27,7 @@ stc.transpile({
     }
   }
 });
+```
 
 ## More options
 See https://github.com/postcss/postcss get more options.
