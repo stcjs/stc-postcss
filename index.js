@@ -1,7 +1,8 @@
 const plugin = require('stc-plugin');
 const postcss = require('postcss');
 
-module.exports = class PostCSSPlugin extends plugin {
+const Base = plugin.__esModule ? plugin.default || plugin;
+module.exports = class PostCSSPlugin extends Base {
   async run() {
     const content = await this.getContent('utf-8');
 
