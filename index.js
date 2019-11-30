@@ -9,7 +9,7 @@ module.exports = class PostCSSPlugin extends Base {
     let result = null;
     try {
       result = await postcss(this.options).process(content, {
-        from: this.file
+        from: this.file.path
       });
     } catch (e) {
       this.fatal(`[${e.status}] ${e.message}`, e.line, e.column);
