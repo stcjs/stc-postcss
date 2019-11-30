@@ -1,15 +1,13 @@
 const plugin = require('stc-plugin');
-const { extend } = require('stc-helper');
 const postcss = require('postcss');
 
-module.exports = class PostCSSPlugin extends Plugin {
+module.exports = class PostCSSPlugin extends plugin {
   async run() {
     const content = await this.getContent('utf-8');
-    const postcss = postcss(this.options);
 
     let result = null;
     try {
-      result = await postcss.process(content);
+      result = await postcss(this.options).process(content);
     } catch (e) {
       this.fatal(`[${e.status}] ${e.message}`, e.line, e.column);
     }
