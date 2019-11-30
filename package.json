@@ -1,6 +1,6 @@
 {
   "name": "stc-postcss",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "stcjs postcss plugin",
   "main": "index.js",
   "keywords": [
